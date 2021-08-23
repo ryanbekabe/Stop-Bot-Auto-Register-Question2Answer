@@ -1,6 +1,8 @@
 # Stop-Bot-Auto-Register-Question2Answer
 Mengcekal bot yang otomatis mendaftar akun pada Question2Answer
 
+![Anti Bot Register Question2Answer](https://github.com/ryanbekabe/Stop-Bot-Auto-Register-Question2Answer/raw/main/Stop-Bot-Auto-Register-Question2Answer.png)
+
 Perlu diketahui, bot auto register yang otomatis mendaftarkan akun ke website yang berbasis Question2Answer ini menggunakan method POST, berikut contohnya:
 
 ```git
