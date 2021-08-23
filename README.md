@@ -28,7 +28,7 @@ Jadi, field handle dengan nama "doregisterbkb" tersebut harus dirubah terlebih d
 
 Sejauh ini, reCAPTCHA v2 dari Google masih bisa ditembus, dan sedangkan dengan manupulasi DOM ini tidak bisa ditembus.
 
-
+Demonstration: https://youtu.be/aXdBYYVb6Tk
 
 Regard,
 
