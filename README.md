@@ -1,9 +1,15 @@
 # Stop-Bot-Auto-Register-Question2Answer
 Mengcekal bot yang otomatis mendaftar akun pada Question2Answer
 
+(Block bots that automatically register accounts on Question2Answer)
+
+(Click here first before registering)
+
 ![Anti Bot Register Question2Answer](https://github.com/ryanbekabe/Stop-Bot-Auto-Register-Question2Answer/raw/main/Stop-Bot-Auto-Register-Question2Answer.png)
 
 Perlu diketahui, bot auto register yang otomatis mendaftarkan akun ke website yang berbasis Question2Answer ini menggunakan method POST, berikut contohnya:
+
+(Please note, the auto register bot which automatically registers an account with this Question2Answer website uses the POST method, here are examples:)
 
 ```git
 HTTP headers:
@@ -31,11 +37,19 @@ emailhandle=billghana8&password=xxrasfyi10&dologin=1&code=0-1629788694-e551356f1
 
 Maka untuk mengatasinya, diperlukan modifikasi field textbox yang ada pada file qa-include/pages/register.php, yakni dengan merubah pada "$qa_content['form'] = array", yakni pada "hidden" dengan nama textbox "'doregister' => '1'", rubah dengan nama lain, misal "doregister_modif".
 
+(So to overcome this, it is necessary to modify the textbox field in the qa-include/pages/register.php file, by changing the "$qa_content['form'] = array", in "hidden" with the textbox name "'doregister' => '1'", change it to another name, for example "doregister_modif". https://github.com/ryanbekabe/Stop-Bot-Auto-Register-Question2Answer/blob/main/register.php#L193)
+
 Adapun "doregister" yang akan digunakan untuk mendaftar yang sebenarnya kita letakkan pada "'fields' => array", pada "'handle' => array", misal saya beri nama "doregisterbkb".
+
+(As for the "doregister" that will be used to register which are actually, we put it on "'fields' => array", on "'handle' => array", for example, I named it "doregisterbkb". https://github.com/ryanbekabe/Stop-Bot-Auto-Register-Question2Answer/blob/main/register.php#L174)
 
 Jadi, field handle dengan nama "doregisterbkb" tersebut harus dirubah terlebih dahulu namanya supaya proses pendaftaran user baru bisa dilakukan. Untuk merubahnya dilakukan manipulasi dengan DOM, yang diletakkan pada qa-include/qa-theme-base.php, yang saya letakkan JavaScript DOM pada "public function main()".
 
+(So, the handle field with the name "doregisterbkb" must be changed first, so that the new user registration process can be carried out. To change it, manipulation using the DOM, which is placed in qa-include/qa-theme-base.php, which I put the JavaScript DOM in "public function main()". https://github.com/ryanbekabe/Stop-Bot-Auto-Register-Question2Answer/blob/main/qa-theme-base.php#L713)
+
 Sejauh ini, reCAPTCHA v2 dari Google masih bisa ditembus, dan sedangkan dengan manupulasi DOM ini tidak bisa ditembus.
+
+(So far, reCAPTCHA v2 from Google is still penetrable, and whereas with DOM manipulation this is impenetrable.)
 
 Demonstration: https://youtu.be/aXdBYYVb6Tk
 
